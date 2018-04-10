@@ -7,6 +7,8 @@ public class Text : MonoBehaviour {
     BoxCollider2D textCol;
     Rigidbody2D rb;
     Camera mainCam;
+    bool touched;
+    
 
     public Vector2 minForce;
     public Vector2 maxForce;
