@@ -110,7 +110,11 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 93
+=======
+  controlID: 83
+>>>>>>> da56ebdbcb60cbbe48718f5c09589566d784a4f5
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +138,11 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 94
+=======
+  controlID: 84
+>>>>>>> da56ebdbcb60cbbe48718f5c09589566d784a4f5
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +220,11 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 114
+=======
+  controlID: 126
+>>>>>>> da56ebdbcb60cbbe48718f5c09589566d784a4f5
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -616,9 +628,15 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: c02a0000
     m_LastClickedID: 10944
     m_ExpandedIDs: 9efbffff00000000
+=======
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 40fbffff00000000
+>>>>>>> da56ebdbcb60cbbe48718f5c09589566d784a4f5
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,19 +698,25 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Silve\Projects\Unity\Redacted\New Unity Project
+  m_LastProjectPath: C:\Users\Jasmine\Desktop\Redacted\Redacted\New Unity Project
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 5a280000
     m_LastClickedID: 10330
     m_ExpandedIDs: 000000003c270000ba28000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 44290000
+    m_LastClickedID: 10564
+    m_ExpandedIDs: 0000000044290000c22a000000ca9a3bffffff7f
+>>>>>>> da56ebdbcb60cbbe48718f5c09589566d784a4f5
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,7 +744,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003c270000ba280000
+=======
+    m_ExpandedIDs: 0000000044290000c22a0000
+>>>>>>> da56ebdbcb60cbbe48718f5c09589566d784a4f5
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
