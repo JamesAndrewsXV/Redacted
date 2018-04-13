@@ -12,10 +12,6 @@ public class PlayerControl : MonoBehaviour {
 	public float maxSpeed = 150f;           // The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;           // Array of clips for when the player jumps.
 	public float jumpForce = 5f;            // Amount of force added when the player jumps.
-	public AudioClip[] taunts;              // Array of clips for when the player taunts.
-	public float tauntProbability = 50f;    // Chance of a taunt happening.
-	public float tauntDelay = 1f;           // Delay for when the taunt should happen.
-	private int tauntIndex;                 // The index of the taunts array indicating the most recent taunt.
 
 	private Transform groundCheck;          // A position marking where to check if the player is grounded.
 	private bool grounded = false;          // Whether or not the player is grounded.
@@ -34,6 +30,7 @@ public class PlayerControl : MonoBehaviour {
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
+		Debug.Log(grounded);
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if (Input.GetKey(KeyCode.UpArrow) && grounded)
