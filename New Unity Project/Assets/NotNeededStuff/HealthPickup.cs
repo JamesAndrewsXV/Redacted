@@ -10,6 +10,7 @@ public class HealthPickup : MonoBehaviour
 	private PickupSpawner pickupSpawner;	// Reference to the pickup spawner.
 	private Animator anim;					// Reference to the animator component.
 	private bool landed;					// Whether or not the crate has landed.
+    HealthPickup finalPlat;
 
 
 	void Awake ()
@@ -28,31 +29,13 @@ public class HealthPickup : MonoBehaviour
 			// Get a reference to the player health script.
 			PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
-			// Increasse the player's health by the health bonus but clamp it at 100.
-			playerHealth.health += healthBonus;
-			playerHealth.health = Mathf.Clamp(playerHealth.health, 0f, 100f);
+            // Increasse the player's health by the health bonus but clamp it at 100.
+            Destroy(this);
+            finalPlat = Instantiate(this);
+            finalPlat.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 
-			// Update the health bar.
-			playerHealth.UpdateHealthBar();
-
-			// Trigger a new delivery.
-			pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
-
-			// Play the collection sound.
-			AudioSource.PlayClipAtPoint(collect,transform.position);
-
-			// Destroy the crate.
-			Destroy(transform.root.gameObject);
-		}
-		// Otherwise if the crate hits the ground...
-		else if(other.tag == "ground" && !landed)
-		{
-			// ... set the Land animator trigger parameter.
-			anim.SetTrigger("Land");
-
-			transform.parent = null;
-			gameObject.AddComponent<Rigidbody2D>();
-			landed = true;	
+            // Play the collection sound.
+            AudioSource.PlayClipAtPoint(collect, transform.position);
 		}
 	}
 }
