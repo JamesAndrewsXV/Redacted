@@ -10,6 +10,9 @@ public class Text : MonoBehaviour {
 	bool touched;
 	Vector2 originalPos;
 
+	GameObject plane;
+	public GameObject redaction;
+
 
 	public Vector2 minForce;
 	public Vector2 maxForce;
@@ -32,6 +35,10 @@ public class Text : MonoBehaviour {
 				rb.bodyType = RigidbodyType2D.Dynamic;
 				rb.AddForce(new Vector3(Random.Range(minForce.x, maxForce.x), Random.Range(minForce.y, maxForce.y), 0));
 				touched = true;
+
+				plane = Instantiate(redaction);
+
+				plane.transform.position = new Vector3(rb.gameObject.transform.position.x, rb.gameObject.transform.position.y, rb.gameObject.transform.position.z);
 			}
 		}
 	}
@@ -41,6 +48,8 @@ public class Text : MonoBehaviour {
 			transform.position = originalPos;
 			rb.bodyType = RigidbodyType2D.Static;
 			touched = false;
+			Destroy(plane);
 		}
 	}
 }
+
