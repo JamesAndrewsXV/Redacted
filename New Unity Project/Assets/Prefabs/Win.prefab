@@ -77,3 +77,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73548dcc409e34726869d84e0ad654b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToLose: 60
+  timer: {fileID: 0}

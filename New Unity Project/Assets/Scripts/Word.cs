@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Text : MonoBehaviour {
+public class Word : MonoBehaviour {
 
 	static int totalClicked = 0;
 

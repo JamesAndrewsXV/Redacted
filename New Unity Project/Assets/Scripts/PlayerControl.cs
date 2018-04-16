@@ -30,7 +30,6 @@ public class PlayerControl : MonoBehaviour {
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
-		Debug.Log(grounded);
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if (Input.GetKey(KeyCode.UpArrow) && grounded)
