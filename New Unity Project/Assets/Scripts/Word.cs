@@ -15,6 +15,7 @@ public class Word : MonoBehaviour {
 
 	GameObject plane;
 	public GameObject redaction;
+	float timeToRestore = 7f;
 
 
 	public Vector2 minForce;
@@ -45,12 +46,26 @@ public class Word : MonoBehaviour {
 				plane = Instantiate(redaction);
 
 				plane.transform.position = new Vector3(rb.gameObject.transform.position.x, rb.gameObject.transform.position.y, rb.gameObject.transform.position.z);
+
+				StartCoroutine(RestoreTimer());
 			}
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (touched && other.gameObject.tag == "Player") {
+		if (other.gameObject.tag == "Player") {
+			Restore();
+		}
+	}
+
+
+	IEnumerator RestoreTimer() {
+		yield return new WaitForSeconds(timeToRestore);
+		Restore();
+	}
+
+	void Restore() {
+		if (touched) {
 			totalClicked--;
 			if (totalClicked < 0) {
 				totalClicked = 0;
