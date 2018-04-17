@@ -21,12 +21,14 @@ public class Win : MonoBehaviour {
 	IEnumerator LoseTimer() {
 		yield return new WaitForSeconds(timeToLose);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		Score.IncrementCensorerWins();
 	}
 
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			Score.IncrementPlayerWins();
 		}
 	}
 }
